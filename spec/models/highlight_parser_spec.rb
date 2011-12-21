@@ -5,8 +5,14 @@ describe HighlightParser do
   it "should parse Papers xml" do
     parsed_results = HighlightParser.parse(papers_xml)
 
-    parsed_results[:publication].should == parsed_publication_json
-    parsed_results[:user].should        == parsed_user_json
+    parsed_results.tap do |r|
+      r[:publication].should == parsed_publication_json
+      r[:user].should        == parsed_user_json
+      r[:highlights].length.should eq 6
+      highlight = r[:highlights].first
+      highlight['text'].should == "Daily and seasonal rhythms in the endocrine system are co-ordinated by a hypothalamic pacemaker, the suprachias- matic nuclei (SCN) that is synchronised to solar time by direct retinal afferents."
+    end
+    
   end
 
 end

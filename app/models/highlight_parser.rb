@@ -6,7 +6,9 @@ class HighlightParser
     user        = content['user']
     publication = content['publication']
 
-    {:user => user, :publication => publication}
+    highlights  = publication['annotations']['annotation']
+
+    {:user => user, :publication => publication, :highlights => highlights}
   end
 end
 
