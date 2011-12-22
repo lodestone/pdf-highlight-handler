@@ -2,6 +2,8 @@
 # require 'mongo'
 
 source 'http://rubygems.org'
+gem 'heroku'
+
 gem 'rails', '3.1.2'
 
 # Bundle edge Rails instead:
