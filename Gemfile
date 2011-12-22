@@ -48,4 +48,10 @@ group :test, :development do
   gem "cucumber"
   gem "cucumber-rails"
   gem "launchy" # then show me the page 
+  gem "guard"
+  gem "guard-rspec"
+  if RUBY_PLATFORM =~ /darwin/
+    gem 'rb-fsevent'
+    gem 'growl_notify'
+  end
 end

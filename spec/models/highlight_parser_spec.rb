@@ -2,20 +2,84 @@ require 'spec_helper'
 
 describe HighlightParser do
 
-  it "should parse Papers xml" do
-    parsed_results = HighlightParser.parse(papers_xml)
+  context :parse do
 
-    parsed_results.tap do |r|
-      r[:publication].should == parsed_publication_json
-      r[:user].should        == parsed_user_json
-      r[:highlights].length.should eq 6
-      highlight = r[:highlights].first
-      highlight['text'].should == "Daily and seasonal rhythms in the endocrine system are co-ordinated by a hypothalamic pacemaker, the suprachias- matic nuclei (SCN) that is synchronised to solar time by direct retinal afferents."
+    let(:parsed_results) { HighlightParser.parse(papers_xml) }
+    subject { parsed_results }
+
+    it "should be generally okay" do
+      parsed_results.should_not be_nil
     end
-    
+
+    context "the newly created Publication" do
+      subject { parsed_results.first }
+      its(:class)      { should equal Publication }
+      its(:uuid)       { should == "02FD97AC-4A44-402D-A6C8-3D81125CBF0F" }
+      its(:title)      { should == "Circadian clocks: regulators of endocrine and metabolic rhythms" }
+      its(:authors)    { should == "M Hastings et al." }
+      its(:source)     { should == "Journal of Endocrinology" }
+      its(:reference)  { should == "2007 vol. 195 (2) pp. 187-198" }
+      # its(:highlights) { should_not be_empty }
+    end
+
+    context "the User" do
+      subject { parsed_results[1] }
+      its(:name) { should == "Alexander Griekspoor" }
+      its(:uuid) { should == '1' }
+    end
+
+    context "the Highlights" do
+      subject { parsed_results[2] }
+      its(:text) { should == "Daily and seasonal rhythms in the endocrine system are co-ordinated by a hypothalamic pacemaker, the suprachias- matic nuclei (SCN) that is synchronised to solar time by direct retinal afferents." }
+      its(:page) { should == '0' }
+      its(:created_at) { should == Date.parse('2011-12-16') }
+    end
+
+  end
+
+  context :raw_xml_to_hash do
+
+    let(:parsed_results) { HighlightParser.raw_xml_to_hash(papers_xml) }
+    subject { parsed_results }
+
+    it "should parse Papers xml" do
+      subject.should_not be_nil
+    end
+
+    its([:publication]) { should == parsed_publication_json }
+    its([:user]) { should == parsed_user_json }
+
+    context :highlights do
+      subject { parsed_results[:highlights].first }
+
+      its(['text'])       { should == "Daily and seasonal rhythms in the endocrine system are co-ordinated by a hypothalamic pacemaker, the suprachias- matic nuclei (SCN) that is synchronised to solar time by direct retinal afferents." }
+      its(['page'])       { should == '0' }
+      its(['created_at']) { should == "2011-12-16 14:02:02 +0000" }
+
+      it "should contain :highlights info" do
+        parsed_results[:highlights].length.should eq 6
+        highlight = parsed_results[:highlights].first
+        highlight['rects']['rect'].length.should == 4
+      end
+    end
+      
   end
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def parsed_user_json; {"name"=>"Alexander Griekspoor", "id"=>"1"}; end
 

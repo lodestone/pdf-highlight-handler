@@ -10,4 +10,14 @@ class Publication
 
   many :highlights
 
+  def self.from_hash(hash)
+    uuid          = hash['id']
+    pub           = find_by_uuid(uuid) || new(:uuid => uuid)
+    pub.title     = hash['title']
+    pub.authors   = hash['authors']
+    pub.source    = hash['source']
+    pub.reference = hash['reference']
+    pub
+  end
+
 end
