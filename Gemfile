@@ -48,6 +48,7 @@ group :test, :development do
   gem "rspec"
   gem "rspec-rails"
   gem "cucumber"
+  gem "capybara"
   gem "cucumber-rails"
   gem "launchy" # then show me the page 
   gem "guard"
