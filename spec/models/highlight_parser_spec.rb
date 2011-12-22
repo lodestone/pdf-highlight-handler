@@ -19,7 +19,7 @@ describe HighlightParser do
       its(:authors)    { should == "M Hastings et al." }
       its(:source)     { should == "Journal of Endocrinology" }
       its(:reference)  { should == "2007 vol. 195 (2) pp. 187-198" }
-      # its(:highlights) { should_not be_empty }
+      its(:highlights) { should_not be_empty }
     end
 
     context "the User" do
@@ -33,6 +33,7 @@ describe HighlightParser do
       its(:text) { should == "Daily and seasonal rhythms in the endocrine system are co-ordinated by a hypothalamic pacemaker, the suprachias- matic nuclei (SCN) that is synchronised to solar time by direct retinal afferents." }
       its(:page) { should == '0' }
       its(:created_at) { should == Date.parse('2011-12-16') }
+      its(:fragments) { should_not be_empty }
     end
 
   end
