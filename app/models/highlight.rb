@@ -11,17 +11,17 @@ class Highlight
   many :fragments
 
   def self.from_hash(hash)
-    hash = hash.first
-    highlight = Highlight.new
-    highlight.text = hash['text']
-    highlight.page = hash['page']
-    highlight.created_at = hash['created_at']
-    highlight
+    highlight = Highlight.new(hash)
+    # highlight.text = hash['text']
+    # highlight.page = hash['page']
+    # highlight.created_at = hash['created_at']
+    # highlight
   end
 
   def self.from_hashes(hashes)
-    hashes.each do |hash|
-      from_hash(hash)
+    hashes.inject([]) do |highlights, hash|
+      highlights << from_hash(hash)
+      highlights
     end
   end
 

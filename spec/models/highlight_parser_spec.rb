@@ -29,7 +29,7 @@ describe HighlightParser do
     end
 
     context "the Highlights" do
-      subject { parsed_results[2] }
+      subject { parsed_results[2].first }
       its(:text) { should == "Daily and seasonal rhythms in the endocrine system are co-ordinated by a hypothalamic pacemaker, the suprachias- matic nuclei (SCN) that is synchronised to solar time by direct retinal afferents." }
       its(:page) { should == '0' }
       its(:created_at) { should == Date.parse('2011-12-16') }

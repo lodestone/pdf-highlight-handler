@@ -10,9 +10,8 @@ class HighlightParser
     [ 
       Publication.from_hash(hash[:publication]),
       User       .from_hash(hash[:user]),
-      Highlight  .from_hash(hash[:highlights])
+      Highlight  .from_hashes(hash[:highlights])
     ]
-
   end
 
   def self.raw_xml_to_hash(xml)
