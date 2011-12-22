@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe HighlightParser do
 
-  context :parse do
+  context "when parsing xml" do
 
     let(:parsed_results) { HighlightParser.parse(papers_xml) }
     subject { parsed_results }
