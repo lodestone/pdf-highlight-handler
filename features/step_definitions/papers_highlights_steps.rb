@@ -1,8 +1,8 @@
 Given /^I am the Papers App$/ do
 end
 
-When /^I post the following xml:$/ do |string|
-  post :publications, string
+When /^I post the (.*) data$/ do |file|
+  post :publications, File.open("#{Rails.root}/spec/fixtures/#{file}.xml").read
 end
 
 Then /^a publication should be created with the following data:$/ do |table|
