@@ -1,0 +1,58 @@
+<content>
+<user>
+    <name>Matias Piipari</name>
+    <id>3</id>
+</user>
+<publication>
+    <title>Delamination of cells from neurogenic placodes does not involve an epithelial-to-mesenchymal transition</title>
+    <authors>A Graham et al.</authors>
+    <source>Development</source>
+    <reference>2007 vol. 134 (23) pp. 4141-4145</reference>
+    <id>F61E3B1E-C617-445F-A5A5-2D31BCFD23B4</id>
+    <annotations>
+        <annotation>
+            <text>Neurogenic placodes are specialized regions of embryonic ectoderm that generate the majority of the neurons of the cranial sensory ganglia.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:25 +0000</created_at>
+            <rects>
+                <rect>{{49.464800000000004, 621.27229999999997}, {484.27135907310247, 8.2450000000000045}}</rect>
+                <rect>{{49.464800000000004, 610.27329999999995}, {62.803100714564316, 8.2450000000000045}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The neurogenic placodes generate the majority of neurons of the cranial sensory ganglia, including all of those mediating the special senses of hearing, balance and taste</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:30 +0000</created_at>
+            <rects>
+                <rect>{{49.463999999999999, 448.4375}, {249.44719861972334, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 437.43650000000002}, {249.44245145207645, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 426.43550000000005}, {134.09249678033589, 8.7019999999999982}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The best-studied example of delamination in the vertebrate embryo is the emergence of neural crest cells from the neural tube.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:34 +0000</created_at>
+            <rects>
+                <rect>{{58.963999999999999, 272.42150000000038}, {239.9481496380568, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 261.4205000000004}, {249.4623943232894, 8.7019999999999982}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>Here we present data that show, counter to expectations, that placodal delamination does not reflect neural crest delamination but is a distinct process. Crucially, we find that placodal delamination does not involve the assumption of a mesenchymal shape by the emigrating cells, and that the placodes do not express molecules associated with EMT. Furthermore, we show that the placodal epithelium is pseudostratified, mitotically quiescent and that when cell division does occur it is apically located.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:36 +0000</created_at>
+            <rects>
+                <rect>{{322.589, 371.4020000000005}, {239.94719916558262, 8.7019999999999982}}</rect>
+                <rect>{{313.089, 360.40100000000052}, {249.46525406336769, 8.7019999999999982}}</rect>
+                <rect>{{313.089, 349.40000000000055}, {249.31230241537099, 8.7019999999999982}}</rect>
+                <rect>{{313.089, 338.39900000000057}, {249.43200277912621, 8.7019999999999982}}</rect>
+                <rect>{{313.089, 327.39800000000059}, {249.38450117099291, 8.7019999999999982}}</rect>
+                <rect>{{313.089, 316.39700000000062}, {249.39020261514185, 8.7019999999999982}}</rect>
+                <rect>{{313.089, 305.39600000000064}, {249.44245251774788, 8.7019999999999982}}</rect>
+                <rect>{{313.089, 294.39500000000066}, {166.81049567162989, 8.7019999999999982}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>

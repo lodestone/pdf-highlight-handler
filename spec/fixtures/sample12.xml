@@ -1,0 +1,45 @@
+<content>
+<user>
+    <name>Matias Piipari</name>
+    <id>3</id>
+</user>
+<publication>
+    <title>Excess of Neurons in the Human Newborn Mediodorsal Thalamus Compared with That of the Adult</title>
+    <authors>M Abitz et al.</authors>
+    <source>Cerebral Cortex</source>
+    <reference>2007 vol. 17 (11) pp. 2573-2578</reference>
+    <id>30286FF3-5D70-4AFB-B752-8501DA805761</id>
+    <annotations>
+        <annotation>
+            <text>The aim of this study was to quantify the total number of neurons and glial cells in the mediodorsal nucleus of the thalamus (MD) of 8 newborn human brains, in comparison to 8 adult human brains.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:15:03 +0000</created_at>
+            <rects>
+                <rect>{{50.058010449999983, 581.83943377000003}, {245.02476719812137, 8.2131308000000445}}</rect>
+                <rect>{{50.058010449999983, 570.84137019000002}, {245.03911318619879, 8.2131308000000445}}</rect>
+                <rect>{{50.058010449999983, 559.89979430000005}, {229.35705557216693, 8.2131308000000445}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The human brain is distinguished by marked development in both size and complexity of the cerebral cortex and by a concomitant elaboration of interactions between the cerebral cortex and a main source of it’s input, the thalamus.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:15:10 +0000</created_at>
+            <rects>
+                <rect>{{50.058907079999983, 355.09694948000003}, {245.05256450457705, 8.0696699999999737}}</rect>
+                <rect>{{50.058907079999983, 344.15537359000001}, {245.06063336865185, 8.0696699999999737}}</rect>
+                <rect>{{50.058907079999983, 333.21379769999999}, {245.02835353000086, 8.0696699999999737}}</rect>
+                <rect>{{50.058907079999983, 322.21573411999998}, {224.79589886477811, 8.0696699999999737}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>Several studies have described alterations in the total number of neurons in the MD of different diagnostic groups.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:15:14 +0000</created_at>
+            <rects>
+                <rect>{{322.01575237999998, 340.42449615999965}, {236.07550429684454, 8.0696699999999737}}</rect>
+                <rect>{{313.05841867999999, 329.48292026999962}, {245.15836487572568, 8.0696699999999737}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>

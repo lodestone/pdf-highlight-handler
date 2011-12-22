@@ -1,0 +1,63 @@
+<content>
+<user>
+    <name>Matias Piipari</name>
+    <id>3</id>
+</user>
+<publication>
+    <title>Circadian clocks: regulators of endocrine and metabolic rhythms</title>
+    <authors>M Hastings et al.</authors>
+    <source>Journal of Endocrinology</source>
+    <reference>2007 vol. 195 (2) pp. 187-198</reference>
+    <id>02FD97AC-4A44-402D-A6C8-3D81125CBF0F</id>
+    <annotations>
+        <annotation>
+            <text>Daily and seasonal rhythms in the endocrine system are co-ordinated by a hypothalamic pacemaker, the suprachias- matic nuclei (SCN) that is synchronised to solar time by direct retinal afferents.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:01 +0000</created_at>
+            <rects>
+                <rect>{{42.5197, 510.13791280000004}, {227.25072285999624, 8.5559983999999645}}</rect>
+                <rect>{{42.5197, 499.19588874000004}, {227.11348680536565, 8.5559984000000213}}</rect>
+                <rect>{{42.5197, 488.19707708000004}, {227.24031067172803, 8.5559984000000213}}</rect>
+                <rect>{{42.5197, 477.25505302000005}, {58.190253900522933, 8.5559984000000213}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>A molecular clock mechanism comparable to that of the SCN is present in most major organ systems.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:05 +0000</created_at>
+            <rects>
+                <rect>{{84.642847848359324, 389.60528534000008}, {184.98181968873814, 8.5559984000000213}}</rect>
+                <rect>{{42.520646460000052, 378.60647368000008}, {201.05365659671844, 8.5559984000000213}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The endocrine axis is forever dynamic.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:08 +0000</created_at>
+            <rects>
+                <rect>{{42.5197, 299.12691280000001}, {153.20726465448652, 8.5559984000000213}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The suprachiasmatic nuclei (SCN) as a circadian clock</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:11 +0000</created_at>
+            <rects>
+                <rect>{{287.60310000000004, 270.79830199999998}, {227.11540094364329, 8.956377400000008}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>t is perhaps unsurprising to observe daily rhythms of metabolic function and endocrine activity in subjects who are pursuing their normal lives: after all, the internal changes may merely reflect different patterns of behaviour imposed by the cyclical environment.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:17 +0000</created_at>
+            <rects>
+                <rect>{{290.75481184061772, 249.01041280000001}, {223.95325588377244, 8.5559983999999929}}</rect>
+                <rect>{{287.60310000000004, 238.06838874000002}, {227.10875342674149, 8.5559983999999929}}</rect>
+                <rect>{{287.60310000000004, 227.06957708000002}, {227.12957631847678, 8.5559983999999929}}</rect>
+                <rect>{{287.60310000000004, 216.12755302000002}, {227.1163271128022, 8.5559983999999929}}</rect>
+                <rect>{{287.60310000000004, 205.18552896000003}, {95.267823143632199, 8.5559983999999929}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>

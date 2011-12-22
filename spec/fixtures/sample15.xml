@@ -1,0 +1,35 @@
+<content>
+<user>
+    <name>Matias Piipari</name>
+    <id>3</id>
+</user>
+<publication>
+    <title>Differential Accessibility of Circulating Leptin to Individual Hypothalamic Sites</title>
+    <authors>M Faouzi et al.</authors>
+    <source>Endocrinology</source>
+    <reference>2007 vol. 148 (11) pp. 5414-5423</reference>
+    <id>F6761C9A-0DFA-4FE0-B904-080583336CFE</id>
+    <annotations>
+        <annotation>
+            <text>Hypothalamic neurons expressing the long form of the leptin receptor (LRb) mediate important leptin actions.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:44 +0000</created_at>
+            <rects>
+                <rect>{{41.1648, 553.74350000000004}, {252.03200007247926, 7.5359999999999445}}</rect>
+                <rect>{{41.1648, 544.74350000000004}, {202.7839998664856, 7.5359999999999445}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>We previously demonstrated that leptin resistance in diet- induced obese (DIO) mice is characterized by decreased lep- tin signaling in the ARC but not in other leptin-responsive sites of the brain.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:14:51 +0000</created_at>
+            <rects>
+                <rect>{{321.17230000000001, 293.10860000000002}, {242.05050231027627, 9.6329999999999814}}</rect>
+                <rect>{{311.16880000000003, 281.7371}, {252.03500130236148, 9.6329999999999814}}</rect>
+                <rect>{{311.16880000000003, 270.36559999999997}, {252.01600235331068, 9.6329999999999814}}</rect>
+                <rect>{{311.16880000000003, 258.99409999999995}, {72.770000455260288, 9.6329999999999814}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>

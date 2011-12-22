@@ -1,0 +1,51 @@
+<content>
+<user>
+    <name>Alexander Griekspoor</name>
+    <id>1</id>
+</user>
+<publication>
+    <title>Delamination of cells from neurogenic placodes does not involve an epithelial-to-mesenchymal transition</title>
+    <authors>A Graham et al.</authors>
+    <source>Development</source>
+    <reference>2007 vol. 134 (23) pp. 4141-4145</reference>
+    <id>F61E3B1E-C617-445F-A5A5-2D31BCFD23B4</id>
+    <annotations>
+        <annotation>
+            <text>Delamination of cells from neurogenic placodes does not involve an epithelial-to-mesenchymal transition</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:03:18 +0000</created_at>
+            <rects>
+                <rect>{{49.464800000000004, 686.85000000000002}, {478.8936111588477, 17.460000000000036}}</rect>
+                <rect>{{49.464800000000004, 664.85400000000004}, {399.00779751348489, 17.460000000000036}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The neurogenic placodes generate the majority of neurons of the cranial sensory ganglia</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:03:26 +0000</created_at>
+            <rects>
+                <rect>{{49.463999999999999, 448.4375}, {249.44719861972334, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 437.43650000000002}, {85.756500661373138, 8.7019999999999982}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The best-studied example of delamination in the vertebrate embryo is the emergence of neural crest cells from the neural tube. This transient population of multipotent cells is born in the dorsal aspect of the neural tube, and then migrates into the periphery where they generate a wide range of derivatives including sensory neurons. To leave the epithelium, the crest cells alter their contact with the other cells in the dorsal neural tube and assume a mesenchymal morphology, i.e. they undergo an epithelial-to-mesenchymal transition (EMT) (Le Douarin, 1999). The emigration of these cells also involves a breach in the basal lamina around the dorsal aspect of the neural tube, which subsequently seals.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:03:32 +0000</created_at>
+            <rects>
+                <rect>{{58.963999999999999, 272.42150000000038}, {239.9481496380568, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 261.4205000000004}, {249.4623943232894, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 250.41950000000043}, {249.44625618791582, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 239.41850000000042}, {249.44434616494181, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 228.41750000000042}, {249.38734741747379, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 217.41650000000041}, {249.41489476609235, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 206.41550000000041}, {249.44910269713404, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 195.4145000000004}, {249.43770354151729, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 184.4135000000004}, {249.45384398716686, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 173.41250000000039}, {249.42724386191372, 8.7019999999999982}}</rect>
+                <rect>{{49.463999999999999, 162.41150000000039}, {166.77059621363878, 8.7019999999999982}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>

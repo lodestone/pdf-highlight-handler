@@ -1,0 +1,67 @@
+<content>
+<user>
+    <name>Matias Piipari</name>
+    <id>3</id>
+</user>
+<publication>
+    <title>Visualizing the action of steroid hormone receptors in living cells</title>
+    <authors>Griekspoor</authors>
+    <source>Nucl Rec Sig</source>
+    <reference>2007 vol. 4</reference>
+    <id>E54D2995-7A7A-4DEE-AED3-00740C786E86</id>
+    <annotations>
+        <annotation>
+            <text>Transcription controlled by Steroid Hormone Receptors (SHRs) plays a key role in many important physiological processes like organ development, metabolite homeostasis, and response to external stimuli.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:15:30 +0000</created_at>
+            <rects>
+                <rect>{{79.200000000000003, 637.44799999999998}, {460.89799885177609, 8.3250000000000455}}</rect>
+                <rect>{{79.200000000000003, 626.19899999999996}, {390.38999972152715, 8.3250000000000455}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>As early as 1896, Thomas Beatson described that removal of the ovaries in advanced breast cancer patients often resulted in remarkable improvement [Beatson, 1896].</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:15:34 +0000</created_at>
+            <rects>
+                <rect>{{79.200000000000003, 454.88400000000001}, {198.91799828624727, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 443.63499999999999}, {221.91699910831454, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 432.38600000000002}, {206.18099739074711, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 421.137}, {25.01999869537353, 8.3249999999999886}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>As it turned out, this receptor plays a key role in the development and maintenance of the sexual reproductive tissues, and therefore, as Beatson had discovered, in breast cancer as well.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:15:37 +0000</created_at>
+            <rects>
+                <rect>{{79.200000000000003, 322.14499999999998}, {204.19199829101564, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 310.89600000000002}, {221.94600000000003, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 299.64699999999999}, {211.21199884510042, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 288.39800000000002}, {86.939999761581433, 8.3249999999999886}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>Immobilization of SHRs on DNA and other nuclear structures has been studied with photobleaching techniques like Fluorescence Recovery After Photobleaching (FRAP).</text>
+            <page>3</page>
+            <created_at>2011-12-16 14:15:44 +0000</created_at>
+            <rects>
+                <rect>{{79.200000000000003, 198.15700000000001}, {199.97999915599826, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 186.90800000000002}, {192.55499889183051, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 175.65899999999999}, {177.79499905776981, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 164.41}, {96.857998197555546, 8.3249999999999886}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The stoichiometry of interaction between ERα and SRC-1 was studied using fluorescence correlation spectroscopy (FCS).</text>
+            <page>5</page>
+            <created_at>2011-12-16 14:15:49 +0000</created_at>
+            <rects>
+                <rect>{{318.10399999999998, 493.00999999999999}, {221.93200061798092, 11.726999999999975}}</rect>
+                <rect>{{318.10399999999998, 482.53500000000003}, {221.90000000000003, 8.3249999999999886}}</rect>
+                <rect>{{318.10399999999998, 471.286}, {26.49599995803834, 8.3249999999999886}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>

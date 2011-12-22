@@ -1,0 +1,69 @@
+<content>
+<user>
+    <name>Charles Parnot</name>
+    <id>4</id>
+</user>
+<publication>
+    <title>Circadian clocks: regulators of endocrine and metabolic rhythms</title>
+    <authors>M Hastings et al.</authors>
+    <source>Journal of Endocrinology</source>
+    <reference>2007 vol. 195 (2) pp. 187-198</reference>
+    <id>02FD97AC-4A44-402D-A6C8-3D81125CBF0F</id>
+    <annotations>
+        <annotation>
+            <text>Daily and seasonal rhythms in the endocrine system are co-ordinated by a hypothalamic pacemaker, the suprachias- matic nuclei (SCN) that is synchronised to solar time by direct retinal afferents.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:16:29 +0000</created_at>
+            <rects>
+                <rect>{{42.5197, 510.13791280000004}, {227.25072285999624, 8.5559983999999645}}</rect>
+                <rect>{{42.5197, 499.19588874000004}, {227.11348680536565, 8.5559984000000213}}</rect>
+                <rect>{{42.5197, 488.19707708000004}, {227.24031067172803, 8.5559984000000213}}</rect>
+                <rect>{{42.5197, 477.25505302000005}, {58.190253900522933, 8.5559984000000213}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The endocrine axis is forever dynamic.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:16:34 +0000</created_at>
+            <rects>
+                <rect>{{42.5197, 299.12691280000001}, {153.20726465448652, 8.5559984000000213}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The suprachiasmatic nuclei (SCN) as a circadian clock</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:16:37 +0000</created_at>
+            <rects>
+                <rect>{{287.60310000000004, 270.79830199999998}, {227.11540094364329, 8.956377400000008}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The SCN control endocrine cycles in particular and wider metabolic rhythms in general by two general means. First, via their anatomical connections to centres controlling sleep and wakefulness, the SCN determine the timing of sleep and thereby the timing of sleep-dependent events, for example, the nocturnal secretion of prolactin and growth hormone (Fig. 1; Czeisler &amp; Klerman 1999).</text>
+            <page>1</page>
+            <created_at>2011-12-16 14:16:43 +0000</created_at>
+            <rects>
+                <rect>{{306.70697054000004, 501.12323206000002}, {217.68674371153884, 8.5559984000000213}}</rect>
+                <rect>{{297.23953116000007, 490.18120800000003}, {227.18352508907162, 8.5559984000000213}}</rect>
+                <rect>{{297.23953116000007, 479.18239634000003}, {227.17784435685894, 8.5559984000000213}}</rect>
+                <rect>{{297.23953116000007, 468.24037228000003}, {227.18068547439179, 8.5559984000000213}}</rect>
+                <rect>{{297.23953116000007, 457.29834822000004}, {227.18825792161419, 8.5559984000000213}}</rect>
+                <rect>{{297.23953116000007, 446.29953656000004}, {227.14661168909288, 8.5559984000000213}}</rect>
+                <rect>{{297.23953116000007, 435.35751250000004}, {132.08417162912093, 8.5559984000000213}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>consists of the paired SCN that sit at the base of the hypothalamus, above the optic chiasm on either side of the third ventricle (Reppert &amp; Weaver 2002). These clusters of ca 10 000 GABAergic neurons are in turn subdivided into a ventral ‘core’ region, which also express vasoactive intestinal polypeptide (VIP) and receive </text>
+            <page>1</page>
+            <created_at>2011-12-16 14:16:46 +0000</created_at>
+            <rects>
+                <rect>{{52.157499999999985, 163.69036639999993}, {227.13052283037717, 8.5559983999999929}}</rect>
+                <rect>{{52.157499999999985, 152.46535079999992}, {227.13336158982958, 8.5559983999999929}}</rect>
+                <rect>{{52.157499999999985, 141.24033519999992}, {227.18068550823995, 8.5559983999999929}}</rect>
+                <rect>{{52.15749999999997, 130.01531959999991}, {227.16364794201411, 8.5559983999999929}}</rect>
+                <rect>{{52.15749999999997, 118.79030399999992}, {227.15418370080334, 8.5559984000000071}}</rect>
+                <rect>{{52.15749999999997, 107.56528839999991}, {120.86767339287229, 8.5559984000000071}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>

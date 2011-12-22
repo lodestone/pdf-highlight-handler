@@ -1,0 +1,55 @@
+<content>
+<user>
+    <name>Charles Parnot</name>
+    <id>4</id>
+</user>
+<publication>
+    <title>Differential Accessibility of Circulating Leptin to Individual Hypothalamic Sites</title>
+    <authors>M Faouzi et al.</authors>
+    <source>Endocrinology</source>
+    <reference>2007 vol. 148 (11) pp. 5414-5423</reference>
+    <id>F6761C9A-0DFA-4FE0-B904-080583336CFE</id>
+    <annotations>
+        <annotation>
+            <text>Hypothalamic neurons expressing the long form of the leptin receptor (LRb) mediate important leptin actions.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:17:14 +0000</created_at>
+            <rects>
+                <rect>{{41.1648, 553.74350000000004}, {252.03200007247926, 7.5359999999999445}}</rect>
+                <rect>{{41.1648, 544.74350000000004}, {202.7839998664856, 7.5359999999999445}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>We previously demonstrated that leptin resistance in diet- induced obese (DIO) mice is characterized by decreased lep- tin signaling in the ARC but not in other leptin-responsive sites of the brain.</text>
+            <page>0</page>
+            <created_at>2011-12-16 14:17:19 +0000</created_at>
+            <rects>
+                <rect>{{321.17230000000001, 293.10860000000002}, {242.05050231027627, 9.6329999999999814}}</rect>
+                <rect>{{311.16880000000003, 281.7371}, {252.03500130236148, 9.6329999999999814}}</rect>
+                <rect>{{311.16880000000003, 270.36559999999997}, {252.01600235331068, 9.6329999999999814}}</rect>
+                <rect>{{311.16880000000003, 258.99409999999995}, {72.770000455260288, 9.6329999999999814}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>en-week-old C57BL/6J, Ay mice and some ob/ob and db/db mice were purchased from Charles River Laboratories (Wilmington, MA) either with or without intracerebroventricular (icv) cannulae in the lat- eral ventricle. All other mice were bred within our University of Mich- igan specific pathogen free facility and were used at 9 –11 wk of age. Mice with a homologously targeted leptin receptor allele containing an in- ternal ribosome entry site plus cre-recombinase within the 3ﰃ-untrans- lated region of the LRb-specific exon (LRbcre) were generated in our laboratory (16). Mice containing a cre-inducible green fluorescent protein (GFP) reporter [Gt(ROSA)26Sortm2Sho; Jackson Laboratories, Bar Harbor, ME] were crossed with LRbcre mice until double-homozygous mice (LRbGFP) were generated. Additional, C57BL/6-ob/ob and -db/db mice were bred within our facility using heter</text>
+            <page>1</page>
+            <created_at>2011-12-16 14:17:21 +0000</created_at>
+            <rects>
+                <rect>{{56.068699805450443, 510.13270000000006}, {237.1379004386902, 9.5156063465128113}}</rect>
+                <rect>{{41.150600000000026, 501.13270000000006}, {252.05600137710567, 8.1120000000000232}}</rect>
+                <rect>{{41.150600000000026, 492.13270000000006}, {252.09600256347645, 8.1120000000000232}}</rect>
+                <rect>{{41.150600000000026, 483.13270000000006}, {252.01600209999091, 8.1120000000000232}}</rect>
+                <rect>{{41.150600000000026, 474.13270000000006}, {252.04800131416314, 8.1120000000000232}}</rect>
+                <rect>{{41.150600000000026, 465.13270000000006}, {252.03200265312196, 8.1120000000000232}}</rect>
+                <rect>{{41.150600000000026, 456.13270000000006}, {252.04800027656555, 8.4081562499999905}}</rect>
+                <rect>{{41.150600000000026, 447.13270000000006}, {252.08090048446658, 9.5157063465128431}}</rect>
+                <rect>{{41.167500000000018, 438.13270000000006}, {252.08000098037718, 8.1120000000000232}}</rect>
+                <rect>{{41.167500000000004, 429.13270000000006}, {252.0673005016327, 9.5157063465128431}}</rect>
+                <rect>{{41.162800000000004, 420.13270000000006}, {252.04980064086914, 9.5157063465128431}}</rect>
+                <rect>{{41.164600000000007, 411.13270000000006}, {252.08260024414062, 9.5157063465128431}}</rect>
+                <rect>{{41.175200000000018, 402.13270000000006}, {143.87200091362001, 8.1120000000000232}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>
