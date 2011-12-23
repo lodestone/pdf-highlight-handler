@@ -1,3 +1,17 @@
+development:
+  adapter: mongodb
+  host: localhost
+  database: annotations
+
+test: &TEST
+  adapter: mongodb
+  host: localhost
+  database: annotations_test
+
+production:
+  adapter: mongodb
+  host: localhost
+  database: annotations
 
 cucumber:
   <<: *test

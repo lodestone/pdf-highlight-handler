@@ -32,7 +32,7 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
 end
 
-def papers_xml
-  xmlfile = "#{Rails.root}/spec/fixtures/papers_xml.xml"
+def papers_xml(file='sample01')
+  xmlfile = "#{Rails.root}/spec/fixtures/#{file}.xml"
   File.open(xmlfile).read
 end

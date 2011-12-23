@@ -1,9 +1,15 @@
 class HighlightParser
 
+  class ParseError < StandardError; end
+
   class << self
     def parse(xml)
-      hash = raw_xml_to_hash(xml)
-      create_objects_from_hash(hash)
+      begin
+        hash = raw_xml_to_hash(xml)
+        create_objects_from_hash(hash)
+      rescue => ex
+        nil
+      end
     end
 
     def create_objects_from_hash(hash)
