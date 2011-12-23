@@ -2,7 +2,7 @@
 %html{html_attrs}
 %head
   %title Papers Highlighter
-  = stylesheet_link_tag 'bootstrap.min', 'application'
+  = stylesheet_link_tag 'bootstrap.min.css', 'application'
   = javascript_include_tag 'application'
   = csrf_meta_tags
 %body
@@ -18,15 +18,15 @@
               .container{:style => 'background: transparent'}
                 %h3{:style => 'margin-left:20px'}
                   = link_to 'Highlighter', root_path
-                %ul
-                  %li= link_to 'Publications', root_path
-                  %li= link_to 'Highlights', root_path
+                -# %ul
+                -#   %li= link_to 'Publications', root_path
+                -#   %li= link_to 'Highlights', root_path
 
 
                 %ul.secondary-nav
                   %li
-                    %form
-                      %input{:type => 'text', :placeholder => "Find publications..."}
+                    %form{:action=>"/"}
+                      %input{:name => 'q', :type => 'text', :placeholder => "Find publications..."}
 
 
     #main

@@ -3,12 +3,13 @@
 %div{:style => 'text-align:right'}
   %h1= publication.title
   %h2= publication.reference
+  %h3= publication.authors
 
 %br
 %hr
 - publication.highlights.each do |highlight|
   - justification = cycle('left', 'right')
-  %pre{:style => "width:80%; text-align:left; float:#{justification}"}
+  %pre{:style => "width:80%; text-align:#{justification}; float:#{justification}"}
     %code{:style => "text-align:#{justification}"}
       = image_tag 'fileicon.png', :class => 'pull-left', :size => '80x80', :style => "float:#{justification}"
       = highlight.text

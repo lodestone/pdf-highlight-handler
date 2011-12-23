@@ -6,6 +6,11 @@
  *= require_tree . 
 */
 
+body>.container {
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
+
 a { 
  color: #8ac !important;
 }

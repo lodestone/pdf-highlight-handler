@@ -1,30 +1,36 @@
 class Highlight
 
   include MongoMapper::EmbeddedDocument
+  # include MongoMapper::Document
 
   key :text, String
   key :page, String
+  key :user, User
   key :created_at, DateTime
 
   one :user
   one :publication
   many :fragments
 
+  validates_presence_of :user
+
   def self.from_hash(hash, options={})
-    highlight = Highlight.new(hash)
+    hls = Highlight.find_all_by_publication_id_and_user_id(options[:publication].id, options[:user].id)
+    p hls.count
+    highlight = hls.detect {|hl| hl.text == hash['text']}
+    # highlight = Highlight.find_by_publication_id_and_user_id_and_page_and_text(options[:publication].id, options[:user].id, hash['page'], hash['text'])
+    highlight = Highlight.new if highlight.blank?
+    highlight.user = options[:user]
+    highlight.text = hash['text']
+    highlight.page = hash['page']
+    highlight.created_at = hash['created_at']
     hash['rects'].each do |h|
       rect = h[1].first # NASTY XML HOBBITSES
       fragment = Fragment.create_from_rect(rect)
       highlight.fragments << fragment
     end
+    highlight.save
     highlight
-  end
-
-  def self.from_hashes(hashes, options={})
-    hashes.inject([]) do |highlights, hash|
-      highlights << from_hash(hash, options)
-      highlights
-    end
   end
 
 end

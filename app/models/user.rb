@@ -1,10 +1,16 @@
 class User
+
   include MongoMapper::Document
+
   key :uuid
-  many :highlights
+  key :name
+  key :highlights, Array
 
   def self.from_hash(hash)
-    User.find_by_uuid(hash['id']) || User.new(:name => hash['name'], :uuid => hash['id'])
+    user = User.find_or_create_by_uuid(hash['id']) 
+    user.name = hash['name']
+    user
   end
+
 end
 

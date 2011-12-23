@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Dir.glob("#{Rails.root}/spec/fixtures/sample*.xml").each do |file|
+  print "Parsing #{file}..."
+  HighlightParser.parse(File.open(file).read)
+  print "..done!\n"
+end

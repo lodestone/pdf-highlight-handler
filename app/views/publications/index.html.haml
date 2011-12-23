@@ -1,7 +1,14 @@
 - publications.each do |pub|
-  %h2= link_to pub.title, pub
-  %pre
-    %code
-      = pub.reference
+  %div
+    = image_tag 'fileicon.png', :class => 'pull-left', :size => '80x80'
+    %h2= link_to truncate(pub.title, :length => 60), pub
+    %div
+      = pub.authors
+
       = pub.source
+
+      = pub.reference
+
+  %hr
+
 
