@@ -20,7 +20,7 @@
 ### Sample Response ###
 
 
-
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <publication>
       <authors>M Hastings et al.</authors>
@@ -291,4 +291,5 @@
       <source>Journal of Endocrinology</source>
       <title>Circadian clocks: regulators of endocrine and metabolic rhythms</title>
       <uuid>02FD97AC-4A44-402D-A6C8-3D81125CBF0F</uuid>
-    </publication>
+   </publication>
+```
