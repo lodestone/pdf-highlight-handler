@@ -20,4 +20,9 @@ class Publication
     pub
   end
 
+
+  def to_param
+    uuid
+  end
+
 end

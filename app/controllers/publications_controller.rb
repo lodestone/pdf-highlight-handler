@@ -1,7 +1,7 @@
 class PublicationsController < ApplicationController
   respond_to :xml, :html
-  expose(:publication)
-  expose(:publications)
+  expose(:publication) { Publication.find_by_uuid(params[:id]) }
+  expose(:publications) { Publication.all }
 
   def create
     xml = request.raw_post
@@ -14,6 +14,12 @@ class PublicationsController < ApplicationController
         wants.xml {  render :xml => 'Error', :status => 400 }
       end
     end
+  end
+
+  def index
+  end
+
+  def show
   end
 
 end

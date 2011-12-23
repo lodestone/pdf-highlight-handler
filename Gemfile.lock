@@ -79,6 +79,7 @@ GEM
       thor (~> 0.14.6)
     guard-rspec (0.5.10)
       guard (>= 0.8.4)
+    haml (3.1.4)
     heroku (2.17.0)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
@@ -198,6 +199,7 @@ DEPENDENCIES
   growl_notify
   guard
   guard-rspec
+  haml
   heroku
   jquery-rails
   launchy

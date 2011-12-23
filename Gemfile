@@ -15,6 +15,7 @@ gem 'decent_exposure'
 gem 'mongo'
 gem 'mongo_mapper'
 gem 'bson_ext'
+gem 'haml'
 
 
 

@@ -1,0 +1,7 @@
+- publications.each do |pub|
+  %h2= link_to pub.title, pub
+  %pre
+    %code
+      = pub.reference
+      = pub.source
+

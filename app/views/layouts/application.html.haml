@@ -1,0 +1,46 @@
+!!! Strict
+%html{html_attrs}
+%head
+  %title Papers Highlighter
+  = stylesheet_link_tag 'bootstrap.min', 'application'
+  = javascript_include_tag 'application'
+  = csrf_meta_tags
+%body
+  #content.container
+    %header#header
+      .span1.columns
+        &nbsp;
+      .span14.columns
+        .topbar-wrapper{:style => "z-index: 5"}
+          .topbar
+            =# .fill makes it fill across the whole width of the browser window
+            .fill
+              .container{:style => 'background: transparent'}
+                %h3{:style => 'margin-left:20px'}
+                  = link_to 'Highlighter', root_path
+                %ul
+                  %li= link_to 'Publications', root_path
+                  %li= link_to 'Highlights', root_path
+
+
+                %ul.secondary-nav
+                  %li
+                    %form
+                      %input{:type => 'text', :placeholder => "Find publications..."}
+
+
+    #main
+      .row
+        .columns.span1
+        .columns.span14
+          .alert-message.error{:style => 'display:none'}
+            = link_to 'x', '#', :class => 'close'
+            %p= notice 
+            %p= alert
+        .columns.span1
+      .row
+        -# .span1.columns
+        -#   &nbsp;
+        .span15.columns{:style => 'margin-left:40px; margin-right:40px;'}
+          = yield
+
