@@ -7,15 +7,18 @@
 
 ## Example POST ##
 
-    curl -X POST -d @spec/fixtures/sample01.xml http://localhost:3000/publications.xml
-    curl -X POST -d @spec/fixtures/sample02.xml http://localhost:3000/publications.xml
-    curl -X POST -d @spec/fixtures/sample03.xml http://localhost:3000/publications.xml
-    etc...
-
+```sh
+curl -X POST -d @spec/fixtures/sample01.xml http://localhost:3000/publications.xml
+curl -X POST -d @spec/fixtures/sample02.xml http://localhost:3000/publications.xml
+curl -X POST -d @spec/fixtures/sample03.xml http://localhost:3000/publications.xml
+# etc...
+```
 
 ## Example GET ##
 
-    > curl http://localhost:3000/publications/02FD97AC-4A44-402D-A6C8-3D81125CBF0F.xml
+```sh
+curl http://localhost:3000/publications/02FD97AC-4A44-402D-A6C8-3D81125CBF0F.xml
+```
 
 ### Sample Response ###
 
