@@ -16,8 +16,7 @@ class Publication
   def self.from_hash(hash)
     uuid          = hash['id']
     pub           = find_by_uuid(uuid)
-    return pub if pub
-    pub           = new(:uuid => uuid)
+    pub           = new(:uuid => uuid) unless pub
     pub.title     = hash['title']
     pub.authors   = hash['authors']
     pub.source    = hash['source']
