@@ -1,16 +1,18 @@
-= image_tag 'fileicon.png', :class => 'pull-left', :size => '200x200', :style => 'border-left:1px solid #efefef; margin-top:-20px;margin-bottom:10px'
+.publication
+  = image_tag 'fileicon.png', :class => 'pull-left', :size => '200x200'
+  %div{:style => 'text-align:right'}
 
-%div{:style => 'text-align:right'}
-  %h1= publication.title
-  %h2= publication.reference
-  %h3= publication.authors
+    %h1= publication.title
+    %h2= publication.reference
+    %h3= publication.authors
 
 %br
 %hr
-- publication.highlights.each do |highlight|
+- publication.popular_highlights.each do |highlight|
   - justification = cycle('left', 'right')
-  %pre{:style => "width:80%; text-align:#{justification}; float:#{justification}"}
+  %pre.highlight{:style => "text-align:#{justification}; float:#{justification}"}
     %code{:style => "text-align:#{justification}"}
-      = image_tag 'fileicon.png', :class => 'pull-left', :size => '80x80', :style => "float:#{justification}"
+      = image_tag 'fileicon.png', :class => 'pull-left', :size => '80x80', :style => "float:#{justification}", :alt => highlight.text
       = highlight.text
+    %small.pull-right= "(#{highlight.score})"
 

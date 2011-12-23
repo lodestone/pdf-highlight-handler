@@ -1,5 +1,5 @@
 class PublicationsController < ApplicationController
-  respond_to :xml, :html
+  respond_to :xml, :html, :json
   expose(:publication) { Publication.find_by_uuid(params[:id]) }
   expose(:publications) { Publication.where(:title => /#{params[:q]}/).all }
 
@@ -20,6 +20,7 @@ class PublicationsController < ApplicationController
   end
 
   def show
+    respond_with publication
   end
 
 end

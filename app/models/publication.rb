@@ -9,7 +9,6 @@ class Publication
   key :authors
   key :source
   key :reference
-  key :contains
 
   many :highlights
 
@@ -30,25 +29,32 @@ class Publication
     uuid
   end
 
+  def popular_highlights(num=10)
+    highlights.sort[0..num-1]
+  end
+
   def update_highlights(annotations, options={})
     user = options[:user]
     annotations.each do |hash|
       if highlight = highlights.detect{|hl| hl.text == hash['text'] }
+        # We already have this text, remove it
+        score = highlight.score + 1
         highlights.delete(highlight)
       end
-      highlight = Highlight.new() 
+      highlight = Highlight.new 
       highlight.text = hash['text']
       highlight.page = hash['page']
+      highlight.score = score
       highlight.created_at = hash['created_at']
       hash['rects'].each do |h|
         rect = h[1].first # NASTY XML HOBBITSES
         fragment = Fragment.create_from_rect(rect)
         highlight.fragments << fragment
       end
-      # highlight.save
       user.highlights << highlight.id
       highlights << highlight
     end
+    highlights.sort
     user.save
     save
     highlights
