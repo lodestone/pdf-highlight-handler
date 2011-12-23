@@ -10,10 +10,13 @@ class Publication
 
   many :highlights
 
+  validates_presence_of :uuid
   validates_uniqueness_of :uuid
 
   def self.from_hash(hash)
     uuid          = hash['id']
+    pub           = find_by_uuid(uuid)
+    return pub if pub
     pub           = new(:uuid => uuid)
     pub.title     = hash['title']
     pub.authors   = hash['authors']
