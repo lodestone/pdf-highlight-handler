@@ -15,7 +15,7 @@
 
 ## Example GET ##
 
-    > curl http://localhot:3000/publications/02FD97AC-4A44-402D-A6C8-3D81125CBF0F.xml
+    > curl http://localhost:3000/publications/02FD97AC-4A44-402D-A6C8-3D81125CBF0F.xml
 
 ### Sample Response ###
 
