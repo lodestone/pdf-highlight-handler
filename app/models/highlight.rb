@@ -22,9 +22,7 @@ class Highlight
 
   def self.from_hash(hash, options={})
     hls = Highlight.find_all_by_publication_id_and_user_id(options[:publication].id, options[:user].id)
-    p hls.count
     highlight = hls.detect {|hl| hl.text == hash['text']}
-    # highlight = Highlight.find_by_publication_id_and_user_id_and_page_and_text(options[:publication].id, options[:user].id, hash['page'], hash['text'])
     highlight = Highlight.new if highlight.blank?
     highlight.user = options[:user]
     highlight.text = hash['text']

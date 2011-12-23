@@ -25,4 +25,17 @@ describe Publication do
     end
   end
 
+  context "popular highlights" do
+    let(:publication) { Publication.new }
+
+    before(:all) do
+      publication.highlights << Highlight.new(:text => "Hello")
+      publication.save
+    end
+
+    # it "should have the most popular highlights" do
+       # p publication.popular_highlights 
+    # end
+  end
+
 end
