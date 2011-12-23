@@ -10,6 +10,8 @@ class Publication
 
   many :highlights
 
+  validates_uniqueness_of :uuid
+
   def self.from_hash(hash)
     uuid          = hash['id']
     pub           = new(:uuid => uuid)
