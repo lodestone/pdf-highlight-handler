@@ -8,6 +8,7 @@ class HighlightParser
         hash = raw_xml_to_hash(xml)
         create_objects_from_hash(hash)
       rescue => ex
+        # TODO comment or log this logger.fatal ParseError
         nil
       end
     end

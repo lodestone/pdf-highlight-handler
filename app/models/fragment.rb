@@ -5,7 +5,7 @@ class Fragment
   key :location, Array
   key :size, Array
 
-  def self.create_from_rect(rect, options={})
+  def self.create_from_rect(rect, options = {})
     x, y, height, width = extract_coordinates(rect)
     fragment = Fragment.new(options.merge(:location => [x,y], :size => [height, width]))
   end

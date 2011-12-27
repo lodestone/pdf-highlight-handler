@@ -1,7 +1,6 @@
 class Highlight
 
   include MongoMapper::EmbeddedDocument
-  # include MongoMapper::Document
 
   key :text, String
   key :page, String
@@ -20,6 +19,7 @@ class Highlight
     b.score <=> self.score
   end
 
+  # TODO Look at publication
   def self.from_hash(hash, options={})
     hls = Highlight.find_all_by_publication_id_and_user_id(options[:publication].id, options[:user].id)
     highlight = hls.detect {|hl| hl.text == hash['text']}
