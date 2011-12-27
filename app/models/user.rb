@@ -5,7 +5,7 @@ class User
   key :uuid
   key :name
   # TODO consider highlight_ids
-  key :highlights, Array
+  key :highlight_ids, Array
 
   def self.from_hash(hash)
     user = User.find_or_create_by_uuid(hash['id']) 

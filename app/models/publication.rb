@@ -30,11 +30,10 @@ class Publication
   end
 
   def popular_highlights(num=10)
-    # TODO consider 
+    # TODO consider this implimentation
     highlights.sort[0..num-1]
   end
 
-  # TODO shorten
   def update_highlights(annotations, options={})
     user = options[:user]
     annotations.each do |hash|
@@ -49,13 +48,8 @@ class Publication
       highlight.page = hash['page']
       highlight.score = score
       highlight.created_at = hash['created_at']
-      # TODO move this section into Fragment
-      hash['rects'].each do |h|
-        rect = h[1].first # NASTY XML HOBBITSES
-        fragment = Fragment.create_from_rect(rect)
-        highlight.fragments << fragment
-      end
-      user.highlights << highlight.id
+      Fragment.create_from_rect_hashes(hash, highlight)
+      user.highlight_ids << highlight.id
       highlights << highlight
     end
     highlights.sort
