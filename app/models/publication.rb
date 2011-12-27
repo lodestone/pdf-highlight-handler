@@ -15,6 +15,11 @@ class Publication
   validates_presence_of :uuid
   validates_uniqueness_of :uuid
 
+  def self.search(params)
+    reg = /#{params[:q]}/i
+    where(:'$or' => [{ :title => reg}, { :authors => reg }, { :source => reg}, {:"highlights.text" => reg } ])
+  end
+
   def self.from_hash(hash)
     uuid          = hash['id']
     pub           = find_or_create_by_uuid(uuid)
