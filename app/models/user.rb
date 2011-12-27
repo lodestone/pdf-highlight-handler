@@ -4,7 +4,6 @@ class User
 
   key :uuid
   key :name
-  # TODO consider highlight_ids
   key :highlight_ids, Array
 
   def self.from_hash(hash)
