@@ -5,7 +5,7 @@
 
  This application handles incoming xml of users highlights for a given document/publication.
 
- The site is running here: http://papershighlighter.heroku.com
+ The site is running here: http://papershighlighter.herokuapp.com
  
 ## Example POST ##
 
