@@ -17,9 +17,9 @@ gem 'mongo_mapper'
 gem 'bson_ext'
 gem 'haml'
 
-group :production do
-  gem 'therubyracer-heroku'
-end
+# group :production do
+#   gem 'therubyracer-heroku'
+# end
 
 
 # Gems used only for assets and not required
