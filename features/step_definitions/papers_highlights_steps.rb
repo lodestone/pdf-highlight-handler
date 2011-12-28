@@ -31,9 +31,14 @@ Then /^the publication should have the following highlights:$/ do |table|
 end
 
 Then /^a publication should be created with the following data:$/ do |table|
-  publication = Publication.last
+  publication = Publication.first(:order => :updated_at)
   publication.should_not be_nil
+
   table.hashes.each do |row|
     publication.send(row[:attribute]).should == row[:value]
   end
+end
+
+Then /^the publication should have exectly (\d+) highlights:$/ do |count|
+   
 end

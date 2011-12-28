@@ -2,6 +2,7 @@ class Publication
   # This relies on the external uuid
 
   include MongoMapper::Document
+  plugin MongoMapper::Plugins::IdentityMap
   safe
 
   key :uuid
@@ -9,6 +10,7 @@ class Publication
   key :authors
   key :source
   key :reference
+  timestamps!
 
   many :highlights
 
@@ -17,7 +19,7 @@ class Publication
 
   def self.search(params)
     reg = /#{params[:q]}/i
-    where(:'$or' => [{ :title => reg}, { :authors => reg }, { :source => reg}, {:"highlights.text" => reg } ])
+    where(:'$or' => [{ :title => reg }, { :authors => reg }, { :source => reg }, { :"highlights.text" => reg } ])
   end
 
   def self.from_hash(hash)
@@ -39,21 +41,19 @@ class Publication
     highlights.sort[0..num-1]
   end
 
+  def create_new_highlight(hash)
+    highlight = Highlight.new :publication_id => self.id
+    highlight.text = hash['text']
+    highlight.page = hash['page']
+    highlight.created_at = hash['created_at']
+    Fragment.create_from_rect_hashes(hash, highlight)
+    highlight
+  end
+
   def update_highlights(annotations, options={})
     user = options[:user]
     annotations.each do |hash|
-      if highlight = highlights.detect{|hl| hl.text == hash['text'] }
-        # We already have this text, remove it
-        score = highlight.score + 1
-        highlights.delete(highlight)
-      end
-      # TODO refactor this
-      highlight = Highlight.new 
-      highlight.text = hash['text']
-      highlight.page = hash['page']
-      highlight.score = score
-      highlight.created_at = hash['created_at']
-      Fragment.create_from_rect_hashes(hash, highlight)
+      highlight = create_new_highlight(hash)
       user.highlight_ids << highlight.id
       highlights << highlight
     end
