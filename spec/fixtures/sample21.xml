@@ -1,0 +1,65 @@
+<content>
+<user>
+    <name>Tânia Margarido</name>
+    <id>6</id>
+</user>
+<publication>
+    <title>Circadian clocks: regulators of endocrine and metabolic rhythms</title>
+    <authors>M Hastings et al.</authors>
+    <source>Journal of Endocrinology</source>
+    <reference>2007 vol. 195 (2) pp. 187-198</reference>
+    <id>02FD97AC-4A44-402D-A6C8-3D81125CBF0F</id>
+    <annotations>
+        <annotation>
+            <text>: regulators of endocrine and metabolic rhythms</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:32:37 +0000</created_at>
+            <rects>
+                <rect>{{153.88894839880965, 623.42169879999994}, {326.70330542328026, 15.781724000000054}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>seasonal rhythms in the endocrine system are co-ordinated by a hypothalamic pacemaker, the suprachias- matic nuclei (SCN) that is synchronised to solar time by direct retinal afferents. Indivi</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:32:41 +0000</created_at>
+            <rects>
+                <rect>{{86.172327842446023, 510.13791280000004}, {183.59809501755024, 8.5559983999999645}}</rect>
+                <rect>{{42.5197, 499.19588874000004}, {227.11348680536565, 8.5559984000000213}}</rect>
+                <rect>{{42.5197, 488.19707708000004}, {227.24031067172803, 8.5559984000000213}}</rect>
+                <rect>{{42.5197, 477.25505302000005}, {82.488721090142107, 8.5559984000000213}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>engage with the world during daytime wakefulness and then</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:32:50 +0000</created_at>
+            <rects>
+                <rect>{{42.519699999999972, 242.71789679999992}, {227.21286574170895, 8.5559983999999929}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The endocrine axis is forever dynamic. The synthesis and secretion of hormones change predictably over the course of hours, months, years and lifetimes (Hastings 1991, Czeisler &amp; Klerman 1999).</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:32:56 +0000</created_at>
+            <rects>
+                <rect>{{42.5197, 299.12691280000001}, {227.24125760334414, 8.5559984000000213}}</rect>
+                <rect>{{42.5197, 287.8451096}, {227.22043558714483, 8.5559984000000213}}</rect>
+                <rect>{{42.5197, 276.56330639999999}, {227.15134595904891, 8.5559984000000213}}</rect>
+                <rect>{{42.519699999999972, 265.28150319999997}, {58.926599469120887, 8.5559984000000213}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The SCN control endocrine cycles in particular and wider metabolic rhythms in general by two general means. First, via their anatomical connections to centres controlling sleep and wakefulness, the SCN determine the timing of sleep and thereby the timing of sleep-dependent events, for example,</text>
+            <page>1</page>
+            <created_at>2011-12-28 12:33:03 +0000</created_at>
+            <rects>
+                <rect>{{306.70697054000004, 501.12323206000002}, {217.68674371153884, 8.5559984000000213}}</rect>
+                <rect>{{297.23953116000007, 490.18120800000003}, {227.18352508907162, 8.5559984000000213}}</rect>
+                <rect>{{297.23953116000007, 479.18239634000003}, {227.17784435685894, 8.5559984000000213}}</rect>
+                <rect>{{297.23953116000007, 468.24037228000003}, {227.18068547439179, 8.5559984000000213}}</rect>
+                <rect>{{297.23953116000007, 457.29834822000004}, {227.18825792161419, 8.5559984000000213}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>

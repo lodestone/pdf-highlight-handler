@@ -1,0 +1,59 @@
+<content>
+<user>
+    <name>Tânia Margarido</name>
+    <id>6</id>
+</user>
+<publication>
+    <title>Differential Accessibility of Circulating Leptin to Individual Hypothalamic Sites</title>
+    <authors>M Faouzi et al.</authors>
+    <source>Endocrinology</source>
+    <reference>2007 vol. 148 (11) pp. 5414-5423</reference>
+    <id>F6761C9A-0DFA-4FE0-B904-080583336CFE</id>
+    <annotations>
+        <annotation>
+            <text>ifferential Accessibility of Circulating Leptin to Individual Hypothalamic Sites</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:33:31 +0000</created_at>
+            <rects>
+                <rect>{{55.800599646377563, 676.69349999999997}, {431.71919365453726, 16.956000000000017}}</rect>
+                <rect>{{41.1648, 656.69549999999992}, {277.93079393434527, 16.956000000000017}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>ypothalamic neurons expressing the long form of the leptin receptor (LRb) mediate important leptin actions. Although it has been suggested that leptin crosses the blood-brain barrier (BBB) via a specific transport system, we hypothesized the existence of a population of hypothalamic arcuate nucleus (ARC) neurons that senses leptin independently of this trans- port</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:33:42 +0000</created_at>
+            <rects>
+                <rect>{{48.124800038146972, 553.74350000000004}, {245.07200003433229, 7.5359999999999445}}</rect>
+                <rect>{{41.1648, 544.74350000000004}, {252.03199996566775, 7.5359999999999445}}</rect>
+                <rect>{{41.1648, 535.74350000000004}, {252.05600009155268, 7.5359999999999445}}</rect>
+                <rect>{{41.1648, 526.74350000000004}, {252.03199985504153, 7.5359999999999445}}</rect>
+                <rect>{{41.1648, 517.74350000000004}, {252.03200003433221, 7.5359999999999445}}</rect>
+                <rect>{{41.1648, 508.74350000000004}, {252.03200007247921, 7.5359999999999445}}</rect>
+                <rect>{{41.1648, 499.74350000000004}, {17.783999927520753, 7.5360000000000014}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>EPTIN IS AN adipocyte-derived hormone that acts via a specific long-form leptin receptor (LRb) in the brain to reduce food intake and regulate energy expenditure.</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:33:47 +0000</created_at>
+            <rects>
+                <rect>{{59.494800000000005, 418.21409999999997}, {233.70950055944922, 9.6329999999999814}}</rect>
+                <rect>{{65.498800000000003, 407.2131}, {227.7150020588636, 9.6329999999999814}}</rect>
+                <rect>{{41.169300000000007, 396.21210000000002}, {231.64800116419792, 9.6329999999999814}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>We previously demonstrated that leptin resistance in diet- induced obese (DIO) mice is characterized by decreased lep- tin signaling in the ARC but not in other leptin-responsive sites of the brain. I</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:33:50 +0000</created_at>
+            <rects>
+                <rect>{{321.17230000000001, 293.10860000000002}, {242.05050231027627, 9.6329999999999814}}</rect>
+                <rect>{{311.16880000000003, 281.7371}, {252.03500130236148, 9.6329999999999814}}</rect>
+                <rect>{{311.16880000000003, 270.36559999999997}, {252.01600235331068, 9.6329999999999814}}</rect>
+                <rect>{{311.16880000000003, 258.99409999999995}, {78.755000573039069, 9.6329999999999814}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>

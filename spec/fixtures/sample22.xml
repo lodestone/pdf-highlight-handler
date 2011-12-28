@@ -1,0 +1,27 @@
+<content>
+<user>
+    <name>Tânia Margarido</name>
+    <id>6</id>
+</user>
+<publication>
+    <title>Excess of Neurons in the Human Newborn Mediodorsal Thalamus Compared with That of the Adult</title>
+    <authors>M Abitz et al.</authors>
+    <source>Cerebral Cortex</source>
+    <reference>2007 vol. 17 (11) pp. 2573-2578</reference>
+    <id>30286FF3-5D70-4AFB-B752-8501DA805761</id>
+    <annotations>
+        <annotation>
+            <text>The aim of this study was to quantify the total number of neurons and glial cells in the mediodorsal nucleus of the thalamus (MD) of 8 newborn human brains, in comparison to 8 adult human brains. The estimates of the cell numbers were obtained using the stereological principles of the optical fractionator. </text>
+            <page>0</page>
+            <created_at>2011-12-28 12:33:59 +0000</created_at>
+            <rects>
+                <rect>{{50.058010449999983, 581.83943377000003}, {245.02476719812137, 8.2131308000000445}}</rect>
+                <rect>{{50.058010449999983, 570.84137019000002}, {245.03911318619879, 8.2131308000000445}}</rect>
+                <rect>{{50.058010449999983, 559.89979430000005}, {245.06242658589724, 8.2131308000000445}}</rect>
+                <rect>{{50.058010449999983, 548.95821841000009}, {245.01490414840822, 8.2131308000000445}}</rect>
+                <rect>{{50.058010449999983, 538.01664252000012}, {137.7600242132431, 8.2131308000000445}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>

@@ -1,0 +1,57 @@
+<content>
+<user>
+    <name>Tânia Margarido</name>
+    <id>6</id>
+</user>
+<publication>
+    <title>Visualizing the action of steroid hormone receptors in living cells</title>
+    <authors>Griekspoor</authors>
+    <source>Nucl Rec Sig</source>
+    <reference>2007 vol. 4</reference>
+    <id>E54D2995-7A7A-4DEE-AED3-00740C786E86</id>
+    <annotations>
+        <annotation>
+            <text>As early as 1896, Thomas Beatson described that removal of the ovaries in advanced breast cancer patients often resulted in remarkable improvement</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:34:07 +0000</created_at>
+            <rects>
+                <rect>{{79.200000000000003, 454.88400000000001}, {198.91799828624727, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 443.63499999999999}, {221.91699910831454, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 432.38600000000002}, {165.65399934768681, 8.3249999999999886}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>Transcription controlled by Steroid Hormone Receptors (SHRs) plays a key role in many important physiological processes like organ development, metabolite homeostasis, and response to external stimuli. Understandably, the members of this family have drawn a lot of attention from the scientific community since their discovery, four decades ago. </text>
+            <page>0</page>
+            <created_at>2011-12-28 12:34:12 +0000</created_at>
+            <rects>
+                <rect>{{79.200000000000003, 637.44799999999998}, {460.89799885177609, 8.3250000000000455}}</rect>
+                <rect>{{79.200000000000003, 626.19899999999996}, {460.83199999999994, 8.3250000000000455}}</rect>
+                <rect>{{79.200000000000003, 614.94999999999993}, {460.81099999999998, 8.3250000000000455}}</rect>
+                <rect>{{79.200000000000003, 603.70099999999991}, {78.893999855041514, 8.3250000000000455}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>The members of the Steroid Hormone Receptor family share a similar, modular architecture, consisting of a number of independent functional domains</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:34:16 +0000</created_at>
+            <rects>
+                <rect>{{318.10399999999998, 79.365000000000009}, {216.02699997901919, 8.3250000000000028}}</rect>
+                <rect>{{318.10399999999998, 68.116}, {207.4859977321625, 8.3250000000000028}}</rect>
+                <rect>{{318.10399999999998, 56.867000000000004}, {170.00099297904973, 8.3250000000000028}}</rect>
+            </rects>
+        </annotation>
+        <annotation>
+            <text>As it turned out, this receptor plays a key role in the development and maintenance of the sexual reproductive tissues, and therefore, as Beatson had discovered, in breast cancer as wel</text>
+            <page>0</page>
+            <created_at>2011-12-28 12:34:19 +0000</created_at>
+            <rects>
+                <rect>{{79.200000000000003, 322.14499999999998}, {204.19199829101564, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 310.89600000000002}, {221.94600000000003, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 299.64699999999999}, {211.21199884510042, 8.3249999999999886}}</rect>
+                <rect>{{79.200000000000003, 288.39800000000002}, {82.439999735832217, 8.3249999999999886}}</rect>
+            </rects>
+        </annotation>
+    </annotations>
+</publication>
+</content>
