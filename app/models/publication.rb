@@ -36,6 +36,10 @@ class Publication
     uuid
   end
 
+  # def highlights
+  #   Highlight.find_all_by_publication_id(self.id)
+  # end
+
   def popular_highlights(num=10)
     # TODO consider this implimentation
     highlights.sort[0..num-1]

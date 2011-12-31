@@ -8,8 +8,12 @@ class HighlightParser
         hash = raw_xml_to_hash(xml)
         create_objects_from_hash(hash)
       rescue => ex
-        # puts ex
-        # raise ParseError, ex
+        if Rails.env.test?
+          puts ex
+        elsif Rails.env.development?
+          logger.debug(ex)
+        else
+        end
       end
     end
 
@@ -23,7 +27,7 @@ class HighlightParser
     end
 
     def raw_xml_to_hash(xml)
-      json = Crack::XML.parse(xml)
+      json        = Crack::XML.parse(xml)
       content     = json['content']
       user        = content['user'] 
       publication = content['publication']
