@@ -11,7 +11,7 @@ class HighlightParser
         if Rails.env.test?
           puts ex
         elsif Rails.env.development?
-          logger.debug(ex)
+          puts ex.backtrace
         else
         end
       end

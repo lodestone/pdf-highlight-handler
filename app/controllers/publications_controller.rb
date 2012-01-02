@@ -8,7 +8,11 @@ class PublicationsController < ApplicationController
     publication, user, highlights = HighlightParser.parse(xml)
     
     if publication
-      render :xml => publication, :status => 201
+      respond_to do |wants|
+        wants.xml { render :xml => publication.to_xml(:methods => :popular_highlights), :status => 201 }
+        wants.html { render :xml => publication.to_xml(:methods => :popular_highlights), :status => 201 }
+      end
+      # respond_with publication, :status => 201
     else
       respond_to do |wants|
         wants.xml {  render :xml => 'Error', :status => 400 }

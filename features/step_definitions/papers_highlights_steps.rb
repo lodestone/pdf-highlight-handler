@@ -19,13 +19,23 @@ Given /^the publication from sample(\d+) exists$/ do |arg1|
   pub.save
 end
 
-Given /^all the from (.*) data exists$/ do |file|
-  HighlightParser.parse(File.open("#{Rails.root}/spec/fixtures/#{file}.xml").read)
+Given /^all the fixture data exists$/ do 
+  Dir.glob("#{Rails.root}/spec/fixtures/sample*.xml").each do |file|
+    HighlightParser.parse(File.open(file).read)
+  end
+end
+
+# Given /^all data the from (.*) exists$/ do |file|
+#   HighlightParser.parse(File.open("#{Rails.root}/spec/fixtures/#{file}.xml").read)
+# end
+Given /^all the data from sample(\d+) exists$/ do |file|
+  HighlightParser.parse(File.open("#{Rails.root}/spec/fixtures/sample#{file}.xml").read)
 end
 
 Then /^the publication should have the following highlights:$/ do |table|
   response = last_response.body
   table.hashes.each do |row|
+    p row['text']
     response[row['text']].should_not be_nil
   end
 end
@@ -40,5 +50,20 @@ Then /^a publication should be created with the following data:$/ do |table|
 end
 
 Then /^the publication should have exectly (\d+) highlights:$/ do |count|
-   
+  # TODO
+  # 
+end
+
+
+Then /^there should be a total of (\d+) highlights$/ do |num|
+  Publication.all.map(&:highlights).flatten.count.should == num.to_i
+end
+
+Then /^there should be a total of (\d+) "([^"]*)"$/ do |num, model|
+  model.singularize.capitalize.constantize.all.count.should == num.to_i
+end
+
+
+Then /^show me the page$/ do
+  puts last_response.body
 end

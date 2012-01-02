@@ -17,21 +17,21 @@ describe Highlight do
 
     context "when a highlight exists" do
       before(:all) do
-        @highlight = Highlight.new(:publication_id => publication.id, :user => joe, :text => "Grumpy wizards make toxic brew for the evil Queen and Jack.")
+        @highlight = Highlight.new(:user => joe, :text => "Grumpy wizards make toxic brew for the evil Queen and Jack.")
         publication.highlights << @highlight
         @highlight.save
         publication.save
       end
 
       it "should score the highlights" do
-        similar_highlight = Highlight.new(:publication_id => publication.id, :user => bob, :text => "Grumpy wizards make toxic brew for the evil Queen and Jack")
+        similar_highlight = Highlight.new(:user => bob, :text => "Grumpy wizards make toxic brew for the evil Queen and Jack")
+        similar_highlight.save
         publication.highlights << similar_highlight 
-        # similar_highlight.save
+        similar_highlight.publication.should == publication
+        publication.highlights.should == [@highlight, similar_highlight]
         similar_highlight.score.should == 1
         publication.save
-        # publication.reload
-        publication.highlights.first.score.should == 2
-        # publication.popular_highlights.length.should == 1
+        publication.popular_highlights.length.should == 2
       end
     end
 

@@ -48,6 +48,12 @@ Feature:
       | The core loop described above is augmented and stabilised by        |
 
 
+  Scenario: Posting all the fixture data
+    Given I am the Papers App
+    And all the fixture data exists
+    Then there should be a total of 5 "publications"
+    Then there should be a total of 94 highlights
+
   Scenario: Posting sloppy XML when the publication already exists
     Given I am the Papers App
     And the publication from sample01 exists
@@ -61,6 +67,7 @@ Feature:
       | source    | Journal of Endocrinology                                        |
       | authors   | M Hastings et al.                                               |
     And the publication should have exectly 7 highlights:
+    And show me the page
     And the publication should have the following highlights:
       | text                                                                |
       | Daily and seasonal rhythms in the endocrine system are co-ordinated |

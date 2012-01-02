@@ -1,6 +1,7 @@
 class Highlight
 
   # include MongoMapper::Document
+  # plugin MongoMapper::Plugins::IdentityMap
   
   include MongoMapper::EmbeddedDocument
 
@@ -9,21 +10,24 @@ class Highlight
   key :user, User
   key :created_at, DateTime
   key :score, Integer, :default => 1
-  key :count, Integer, :default => 1
-  key :publication_id, ObjectId
-  key :match_id, ObjectId
+  # key :count, Integer, :default => 1
+  # key :publication_id, ObjectId
+  # key :publication, Publication
+  key :user, User
+  # key :match_id, ObjectId
 
-  one :user
-  one :publication
+  # one :user
+  # one :publication
+  # belongs_to :publication
   many :fragments
 
   # validates_presence_of :user
   validates_presence_of :publication_id
 
-  after_save :score_highlight_after_save
+  after_save :score_highlight
 
   def publication
-    Publication.find_by_id(publication_id)
+    _parent_document
   end
 
   # Default sort is big score to small score
@@ -31,22 +35,23 @@ class Highlight
     b.score <=> self.score
   end
   
-  def exact_match
-    publication.highlights.detect{|h| h.text == self.text && h != self }
+  def exact_match(h)
+    h.text == self.text && h != self
   end
 
-  def fuzzy_match
-    self.publication.highlights.detect{|h| 
-      # p [h.text, self.text, NCD.distance(h.text, self.text)]
-      h != self && NCD.distance(h.text, self.text) > 0.7 }
+  def fuzzy_match(h)
+    h != self && NCD.distance(h.text, self.text) > 0.7 
   end
 
   private 
-  def score_highlight_after_save
-    highlight = exact_match
-    highlight ||= fuzzy_match
+  def score_highlight
+    highlight = (publication.highlights-[self]).detect do |h|
+      exact_match(h) || fuzzy_match(h)
+    end
     if highlight
-      highlight.score = highlight.score + 1
+      highlight.score += 1 
+    else
+      self.score += 1
     end
   end
 

@@ -10,9 +10,10 @@ class Publication
   key :authors
   key :source
   key :reference
+  key :highlight_ids, Array
   timestamps!
 
-  many :highlights
+  many :highlights, :in => :highlight_ids
 
   validates_presence_of :uuid
   validates_uniqueness_of :uuid
@@ -37,12 +38,14 @@ class Publication
   end
 
   # def highlights
-  #   Highlight.find_all_by_publication_id(self.id)
+  # #   p self.id
+  # #   p Highlight.all
+  #   Highlight.where(:publication_id => self.id).all
   # end
 
-  def popular_highlights(num=10)
-    # TODO consider this implimentation
-    highlights.sort[0..num-1]
+  def popular_highlights(num = (highlights.length > 2 ? 10 : highlights.length))
+    # TODO sorted
+    highlights[0..num-1]
   end
 
   def create_new_highlight(hash)
@@ -51,6 +54,7 @@ class Publication
     highlight.page = hash['page']
     highlight.created_at = hash['created_at']
     Fragment.create_from_rect_hashes(hash, highlight)
+    raise ParseError unless highlight.valid?
     highlight
   end
 
@@ -63,7 +67,7 @@ class Publication
     end
     highlights.sort
     user.save
-    save
+    self.save
     highlights
   end
 
