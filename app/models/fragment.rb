@@ -18,6 +18,10 @@ class Fragment
     end
   end
 
+  def ===(f)
+    location == f.location
+  end
+
   private
   def self.extract_coordinates(rect)
     rect.gsub(/{|}|\s/, '').split(',').map(&:to_f)

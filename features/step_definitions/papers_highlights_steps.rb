@@ -35,7 +35,6 @@ end
 Then /^the publication should have the following highlights:$/ do |table|
   response = last_response.body
   table.hashes.each do |row|
-    p row['text']
     response[row['text']].should_not be_nil
   end
 end
@@ -49,9 +48,12 @@ Then /^a publication should be created with the following data:$/ do |table|
   end
 end
 
-Then /^the publication should have exectly (\d+) highlights:$/ do |count|
+Then /^the publication should have exectly (\d+) (.*) tags:$/ do |count, tag|
   xml = Nokogiri::XML.parse(last_response.body)
-  (xml/"//highlights").count.should == count.to_i
+  (xml/"//highlight").each do |hl|
+    puts (hl/'text').inner_html
+  end
+  (xml/"//#{tag}").count.should == count.to_i
 end
 
 
