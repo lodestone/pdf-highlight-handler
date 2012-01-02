@@ -45,7 +45,7 @@ class Publication
 
   def popular_highlights(num = (highlights.length > 2 ? 10 : highlights.length))
     # TODO sorted
-    highlights[0..num-1]
+    highlights.select{|h| h.score > 1 }.sort[0..num-1]
   end
 
   def create_new_highlight(hash)

@@ -29,7 +29,9 @@ describe Highlight do
         publication.highlights << similar_highlight 
         similar_highlight.publication.should == publication
         publication.highlights.should == [@highlight, similar_highlight]
+        publication.popular_highlights.should == [@highlight]
         similar_highlight.score.should == 1
+        @highlight.score.should == 2
         publication.save
         publication.popular_highlights.length.should == 2
       end
