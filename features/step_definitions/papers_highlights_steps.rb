@@ -50,8 +50,8 @@ Then /^a publication should be created with the following data:$/ do |table|
 end
 
 Then /^the publication should have exectly (\d+) highlights:$/ do |count|
-  # TODO
-  # 
+  xml = Nokogiri::XML.parse(last_response.body)
+  (xml/"//highlights").count.should == count.to_i
 end
 
 
