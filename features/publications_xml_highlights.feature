@@ -6,7 +6,7 @@ Feature:
   Scenario: Get XML
     Given I am the Papers App
     And all the data from sample01 exists
-    When I get publication "02FD97AC-4A44-402D-A6C8-3D81125CBF0F"
+    When I get publication "02FD97AC-4A44-402D-A6C8-3D81125CBF0F" via xml
     Then I should receive a response code of 200
     And the publication should have the following highlights:
       | text                                                                |
