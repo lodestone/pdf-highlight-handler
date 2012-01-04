@@ -66,6 +66,49 @@ describe HighlightParser do
       
   end
 
+
+  context "fuzzy matching" do
+
+    before(:all) do
+      Publication.destroy_all
+      HighlightParser.parse(File.open("#{Rails.root}/spec/fixtures/sample02.xml").read)
+      HighlightParser.parse(File.open("#{Rails.root}/spec/fixtures/sample23.xml").read)
+      @publication = Publication.first
+    end
+
+    it "should parse only 1 publication" do
+      Publication.count.should == 1
+    end
+
+    it "should parse the publication" do
+      @publication.title.should == "Visualizing the action of steroid hormone receptors in living cells"
+      @publication.reference.should == "2007 vol. 4"
+      @publication.authors.should == 'Griekspoor'
+      @publication.source.should == 'Nucl Rec Sig'
+    end
+
+    it "should have 8 highlights" do
+      @publication.highlights.length.should == 8
+    end
+
+    it "should match fuzzily" do
+      @publication.popular_highlights.each do |ph|
+        p [ ph.score, ph.text]
+      end
+      @publication.popular_highlights.length.should == 5
+    end
+
+    context "matching fragments" do
+      subject { @publication.highlights.first.fragments.first }
+      its(:x)     { should == 79.2 }
+      its(:y)     { should == 727.0500000000001 }
+      its(:height){ should == 18.5 }
+      its(:width) { should == 391.90000190734867 }
+    end
+    
+  end
+
+
 end
 
 

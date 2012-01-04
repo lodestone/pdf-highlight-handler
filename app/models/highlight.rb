@@ -11,7 +11,7 @@ class Highlight
   key :created_at, DateTime
   key :score, Integer, :default => 1
   # key :count, Integer, :default => 1
-  # key :publication_id, ObjectId
+  key :publication_id
   # key :publication, Publication
   key :user, User
   # key :match_id, ObjectId
@@ -19,20 +19,12 @@ class Highlight
   # one :user
   # one :publication
   # belongs_to :publication
-  many :fragments do
-    def ===(f)
-      each do |fragment|
-        f.each do |ff|
-          return ff === fragment
-        end
-      end
-    end
-  end
+  many :fragments, :extend => Boxable
 
   # validates_presence_of :user
   validates_presence_of :publication_id
 
-  after_save :score_highlight
+  # before_save :score_highlight
 
   def publication
     _parent_document
@@ -40,36 +32,73 @@ class Highlight
 
   # Default sort is big score to small score
   def <=>(b)
-    b.score <=> self.score
+    # b.score <=> self.score
+    b.text <=> self.text
   end
   
   def ===(h)
-    exact_match(h) || fuzzy_match(h) || fragment_match(h)
+    # puts __method__
+    results = h.id != self.id && fragment_match(h)
+                   # (
+                   #  exact_match(h) || 
+                   #  fuzzy_match(h) || 
+                   #  regex_match(h)
+                   # ) && 
+                   # fragment_match(h))
+    p ["The text is", self.text]
+    p ["The h.text is", h.text]
+    p ['exact', exact_match(h)     ]
+    p ['regex', regex_match(h)   ]
+    p ['fuzzy', fuzzy_match(h) ] 
+    p ['fragment', fragment_match(h)]
+    p ['results', results]
+    puts "_____________________________________________________________\n"
+    results
   end
 
   def exact_match(h)
-    h != self && h.text == self.text
+    # puts __method__
+    h.text == self.text
+  end
+
+  def regex_match(h)
+    # puts __method__
+    !!( h.text[self.text] || self.text[h.text] )
   end
 
   def fuzzy_match(h)
-    h != self && NCD.distance(h.text, self.text) > 0.7 
+    # puts __method__
+    NCD.distance(h.text, self.text) > 0.7 
   end
 
   def fragment_match(h)
+    # puts __method__
     return false if h.nil?
+    return false if fragments.empty?
     return !!(h.fragments === fragments)
   end
 
-  private 
+  def fragment_bounding_box
+    fragments.bounding_box
+  end
+
+  def other_highlights
+    # puts __method__
+    publication.highlights-[self]
+  end
+
+  def matching_highlight?
+    # puts __method__
+    other_highlights.select{ |h| self === h }.sort.first
+  end
+
   def score_highlight
-    highlight = (publication.highlights-[self]).detect do |h|
-      self === h
-    end
-    if highlight
-      highlight.score += 1 
-    else
-      self.score += 1
-    end
+    # puts __method__
+    highlight = matching_highlight?
+    # publication.popular_highlight_ids << highlight.id if highlight
+
+    # highlight.score += 1 if highlight
+    # puts "-----------------------------------\\n#{self.text} (#{self.score}): \\nfound match to:\\n#{highlight.text} (#{highlight.score})" if highlight
   end
 
 end

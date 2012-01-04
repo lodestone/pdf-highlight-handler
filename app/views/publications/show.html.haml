@@ -8,11 +8,29 @@
 
 %br
 %hr
-- publication.popular_highlights.each do |highlight|
-  - justification = cycle('left', 'right')
-  %pre.highlight{:style => "text-align:#{justification}; float:#{justification}"}
-    %code{:style => "text-align:#{justification}"}
-      = image_tag 'fileicon.png', :class => 'pull-left', :size => '80x80', :style => "float:#{justification}", :alt => highlight.text
-      = highlight.text
-    %small.pull-right= "(#{highlight.score})"
+.row
+  .columns.span8
+    - publication.popular_highlights.each do |highlight|
+      - justification = cycle('left', 'left')
+      %pre.highlight{:style => "text-align:#{justification}; float:#{justification}"}
+        .pull-left= "(#{highlight.score})"
+        %code{:style => "text-align:#{justification}"}
+          = image_tag 'fileicon.png', :class => 'pull-left', :size => '80x80', :style => "float:#{justification}", :alt => highlight.text
+          = "\"#{highlight.text}\""
+          .pull-right= highlight.id
+
+  .columns.span7
+    %br{:style => "clear:both"}
+    %hr
+
+    - publication.highlights.each do |highlight|
+      - justification = cycle('left', 'left')
+      %pre.highlight{:style => "width:90%; background-color: #777; text-align:#{justification}; float:#{justification}"}
+        %div{:style => "text-align:#{justification}"}
+          = image_tag 'fileicon.png', :class => 'pull-left', :size => '80x80', :style => "float:#{justification}", :alt => highlight.text
+          = highlight.text
+        %small.pull-right= "(#{highlight.score})"
+        .pull-right= highlight.id
+        .pull-right= "[#{highlight.fragment_bounding_box.origin_x.to_i},#{highlight.fragment_bounding_box.origin_y.to_i}]"
+        .pull-right= "[#{highlight.fragment_bounding_box.end_x.to_i},#{highlight.fragment_bounding_box.end_y.to_i}]"
 

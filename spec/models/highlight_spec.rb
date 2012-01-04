@@ -5,7 +5,7 @@ describe Highlight do
 
   it { highlight.should_not be_nil }
 
-  context "popular highlights" do
+  context "(concerning popular highlights)" do
 
     before(:all) do
       Publication.destroy_all
@@ -26,8 +26,9 @@ describe Highlight do
 
       it "should score the highlights" do
         similar_highlight = Highlight.new(:user => bob, :text => "Grumpy wizards make toxic brew for the evil Queen and Jack")
-        similar_highlight.save
         publication.highlights << similar_highlight 
+        # publication.save
+        # publication.score_popular_highlights
         similar_highlight.publication.should == publication
         publication.highlights.should == [@highlight, similar_highlight]
         publication.popular_highlights.should == [@highlight]
@@ -38,16 +39,16 @@ describe Highlight do
       end
 
       it "should match fragments" do
-        @highlight.fragments << Fragment.new(:location => [24,25])
+        @highlight.fragments << Fragment.new(:location => [24,25], :size => [20, 10])
         similar_highlight = Highlight.new(:user => joe, :text => "toxic brew")
         similar_highlight.save
         @highlight.save
-        similar_highlight.fragments << Fragment.new(:location => [24,25])
+        similar_highlight.fragments << Fragment.new(:location => [24,25], :size => [20, 10])
         publication.highlights << similar_highlight
         similar_highlight.fragment_match(@highlight).should == true
       end
+      
     end
-
   end
 
 

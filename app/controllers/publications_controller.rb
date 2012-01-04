@@ -10,6 +10,7 @@ class PublicationsController < ApplicationController
     if publication
       respond_to do |wants|
         wants.xml { render :xml => publication.to_xml(:methods => :popular_highlights), :status => 201 }
+        # wants.xml { render :xml => publication.to_xml(:methods => :popular_highlights), :status => 201 }
         wants.html { render :xml => publication.to_xml(:methods => :popular_highlights), :status => 201 }
       end
       # respond_with publication, :status => 201

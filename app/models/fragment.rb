@@ -6,8 +6,8 @@ class Fragment
   key :size, Array
 
   def self.create_from_rect(rect, options = {})
-    x, y, height, width = extract_coordinates(rect)
-    fragment = Fragment.new(options.merge(:location => [x,y], :size => [height, width]))
+    tmpx, tmpy, tmpwidth, tmpheight = extract_coordinates(rect)
+    fragment = Fragment.new(options.merge(:location => [tmpx.to_f, tmpy.to_f], :size => [tmpwidth.to_f, tmpheight.to_f]))
   end
 
   def self.create_from_rect_hashes(hash, highlight)
@@ -21,6 +21,11 @@ class Fragment
   def ===(f)
     location == f.location
   end
+
+  def x; location.first; end
+  def y; location.last;  end
+  def width; size.first; end
+  def height; size.last; end
 
   private
   def self.extract_coordinates(rect)
