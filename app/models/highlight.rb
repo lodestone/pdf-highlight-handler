@@ -10,6 +10,7 @@ class Highlight
   key :user, User
   key :created_at, DateTime
   key :score, Integer, :default => 1
+  key :matched, Boolean, :default => false
   # key :count, Integer, :default => 1
   key :publication_id
   # key :publication, Publication
@@ -24,7 +25,7 @@ class Highlight
   # validates_presence_of :user
   validates_presence_of :publication_id
 
-  # before_save :score_highlight
+  after_save :score_highlight
 
   def publication
     _parent_document
@@ -45,14 +46,14 @@ class Highlight
                    #  regex_match(h)
                    # ) && 
                    # fragment_match(h))
-    p ["The text is", self.text]
-    p ["The h.text is", h.text]
-    p ['exact', exact_match(h)     ]
-    p ['regex', regex_match(h)   ]
-    p ['fuzzy', fuzzy_match(h) ] 
-    p ['fragment', fragment_match(h)]
-    p ['results', results]
-    puts "_____________________________________________________________\n"
+    # p ["The text is", self.text]
+    # p ["The h.text is", h.text]
+    # p ['exact', exact_match(h)     ]
+    # p ['regex', regex_match(h)   ]
+    # p ['fuzzy', fuzzy_match(h) ] 
+    # p ['fragment', fragment_match(h)]
+    # p ['results', results]
+    # puts "_____________________________________________________________\\n"
     results
   end
 
@@ -93,12 +94,11 @@ class Highlight
   end
 
   def score_highlight
-    # puts __method__
-    highlight = matching_highlight?
-    # publication.popular_highlight_ids << highlight.id if highlight
-
-    # highlight.score += 1 if highlight
-    # puts "-----------------------------------\\n#{self.text} (#{self.score}): \\nfound match to:\\n#{highlight.text} (#{highlight.score})" if highlight
+    matched_highlight = (publication.highlights-[self]).grep(self).first
+    if matched_highlight && !matched_highlight.matched
+      matched_highlight.score += 1
+      self.matched = true
+    end
   end
 
 end

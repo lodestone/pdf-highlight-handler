@@ -9,8 +9,8 @@ class HighlightParser
         create_objects_from_hash(hash)
       rescue => ex
         if Rails.env.test?
-          puts ex
-          puts ex.backtrace
+          # puts ex
+          # puts ex.backtrace
         elsif Rails.env.development?
           puts ex
           puts ex.backtrace

@@ -92,10 +92,7 @@ describe HighlightParser do
     end
 
     it "should match fuzzily" do
-      @publication.popular_highlights.each do |ph|
-        p [ ph.score, ph.text]
-      end
-      @publication.popular_highlights.length.should == 5
+      @publication.popular_highlights.length.should == 3
     end
 
     context "matching fragments" do

@@ -29,22 +29,23 @@ class Publication
     highlights - popular_highlights
   end
 
-  def popular_highlights
-    highlights.sort[0..9]
-  end
+  # def popular_highlights
+  #   highlights.sort[0..9]
+  # end
 
   def score_popular_highlights
     # If I equal or match existing highlight,
     #   then add 1 to highlight popularity score
-    highlights.each_with_index do |highlight, i|
-      (highlights-[highlight]).each do |another_highlight|
-        if highlight === another_highlight
-          @hl = highlight.created_at > another_highlight.created_at ? highlight : another_highlight
-          @hl.score += 1
-          break
-        end
-      end
-    end
+    
+    # highlights.each_with_index do |highlight, i|
+    #   (highlights-[highlight]).each do |another_highlight|
+    #     if highlight === another_highlight
+    #       @hl = highlight.created_at > another_highlight.created_at ? highlight : another_highlight
+    #       @hl.score += 1
+    #       break
+    #     end
+    #   end
+    # end
   end
 
   # def score_popular_highlights
@@ -84,10 +85,10 @@ class Publication
     uuid
   end
 
-  # def popular_highlights(num = (highlights.length > 2 ? 10 : highlights.length))
-  #   # TODO sorted
-  #   highlights.select{|h| h.score > 1 }.sort[0..num-1]
-  # end
+  def popular_highlights(num = (highlights.length > 2 ? 10 : highlights.length))
+    # TODO sorted
+    highlights.select{|h| h.score > 1 }.sort[0..num-1]
+  end
 
   def create_new_highlight(hash)
     highlight = Highlight.new :publication_id => self.id

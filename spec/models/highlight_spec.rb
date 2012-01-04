@@ -18,24 +18,25 @@ describe Highlight do
     context "when a highlight exists" do
 
       before(:all) do
-        @highlight = Highlight.new(:user => joe, :text => "Grumpy wizards make toxic brew for the evil Queen and Jack.")
+        @highlight = Highlight.new(:user => joe, :text => "Grumpy wizards make toxic brew for the evil Queen and Jack.", :fragments => [Fragment.new(:size => [20,20],:location => [20,20] )] )
+
         publication.highlights << @highlight
         @highlight.save
         publication.save
       end
 
       it "should score the highlights" do
-        similar_highlight = Highlight.new(:user => bob, :text => "Grumpy wizards make toxic brew for the evil Queen and Jack")
-        publication.highlights << similar_highlight 
-        # publication.save
-        # publication.score_popular_highlights
+        similar_highlight = Highlight.new(:user => bob, :text => "Grumpy wizards make toxic brew for the evil Queen and Jack", :fragments => [Fragment.new(:size => [20,20],:location => [20,20] )] )
+       publication.highlights << similar_highlight 
         similar_highlight.publication.should == publication
         publication.highlights.should == [@highlight, similar_highlight]
-        publication.popular_highlights.should == [@highlight]
-        similar_highlight.score.should == 1
-        @highlight.score.should == 2
         publication.save
-        publication.popular_highlights.length.should == 2
+        publication.popular_highlights.length.should == 1
+        publication.popular_highlights.should == [similar_highlight]
+        similar_highlight.score.should == 2
+        @highlight.score.should == 1
+        publication.save
+        publication.popular_highlights.length.should == 1
       end
 
       it "should match fragments" do

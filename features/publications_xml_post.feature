@@ -38,8 +38,8 @@ Feature:
       | source    | Journal of Endocrinology                                        |
       | authors   | M Hastings et al.                                               |
     And show me the page
-    And the publication should have exectly 5 popular-highlight tags:
-    And the publication should have exectly 6 highlight tags:
+    And the publication should have exactly 1 popular-highlight tags:
+    And the publication should have exactly 6 highlight tags:
     And the publication should have the following highlights:
       | text                                                                |
       | Daily and seasonal rhythms in the endocrine system are co-ordinated |
@@ -68,7 +68,7 @@ Feature:
       | reference | 2007 vol. 195 (2) pp. 187-198                                   |
       | source    | Journal of Endocrinology                                        |
       | authors   | M Hastings et al.                                               |
-    And the publication should have exectly 5 highlight tags:
+    And the publication should have exactly 5 highlight tags:
 
 
 

@@ -48,7 +48,7 @@ Then /^a publication should be created with the following data:$/ do |table|
   end
 end
 
-Then /^the publication should have exectly (\d+) (.*) tags:$/ do |count, tag|
+Then /^the publication should have exactly (\d+) (.*) tags:$/ do |count, tag|
   xml = Nokogiri::XML.parse(last_response.body)
   (xml/"//#{tag}").count.should == count.to_i
 end
