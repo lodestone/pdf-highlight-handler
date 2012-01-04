@@ -1,7 +1,4 @@
 class Highlight
-
-  # include MongoMapper::Document
-  # plugin MongoMapper::Plugins::IdentityMap
   
   include MongoMapper::EmbeddedDocument
 
@@ -11,17 +8,12 @@ class Highlight
   key :created_at, DateTime
   key :score, Integer, :default => 1
   key :matched, Boolean, :default => false
-  # key :count, Integer, :default => 1
   key :publication_id
-  # key :publication, Publication
   key :user, User
-  # key :match_id, ObjectId
-
-  # one :user
-  # one :publication
-  # belongs_to :publication
+  
   many :fragments, :extend => Boxable
 
+  # TODO
   # validates_presence_of :user
   validates_presence_of :publication_id
 
@@ -33,47 +25,30 @@ class Highlight
 
   # Default sort is big score to small score
   def <=>(b)
-    # b.score <=> self.score
-    b.text <=> self.text
+    b.score <=> self.score
   end
   
   def ===(h)
-    # puts __method__
-    results = h.id != self.id && fragment_match(h)
-                   # (
-                   #  exact_match(h) || 
-                   #  fuzzy_match(h) || 
-                   #  regex_match(h)
-                   # ) && 
-                   # fragment_match(h))
-    # p ["The text is", self.text]
-    # p ["The h.text is", h.text]
-    # p ['exact', exact_match(h)     ]
-    # p ['regex', regex_match(h)   ]
-    # p ['fuzzy', fuzzy_match(h) ] 
-    # p ['fragment', fragment_match(h)]
-    # p ['results', results]
-    # puts "_____________________________________________________________\\n"
-    results
+    h.id != self.id && (string_match(h) && fragment_match(h))
+  end
+
+  def string_match(h)
+    exact_match(h) || regex_match(h) || fuzzy_match(h)
   end
 
   def exact_match(h)
-    # puts __method__
     h.text == self.text
   end
 
   def regex_match(h)
-    # puts __method__
     !!( h.text[self.text] || self.text[h.text] )
   end
 
   def fuzzy_match(h)
-    # puts __method__
     NCD.distance(h.text, self.text) > 0.7 
   end
 
   def fragment_match(h)
-    # puts __method__
     return false if h.nil?
     return false if fragments.empty?
     return !!(h.fragments === fragments)
@@ -84,12 +59,10 @@ class Highlight
   end
 
   def other_highlights
-    # puts __method__
     publication.highlights-[self]
   end
 
   def matching_highlight?
-    # puts __method__
     other_highlights.select{ |h| self === h }.sort.first
   end
 

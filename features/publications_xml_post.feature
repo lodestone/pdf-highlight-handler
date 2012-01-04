@@ -37,7 +37,6 @@ Feature:
       | reference | 2007 vol. 195 (2) pp. 187-198                                   |
       | source    | Journal of Endocrinology                                        |
       | authors   | M Hastings et al.                                               |
-    And show me the page
     And the publication should have exactly 1 popular-highlight tags:
     And the publication should have exactly 6 highlight tags:
     And the publication should have the following highlights:
