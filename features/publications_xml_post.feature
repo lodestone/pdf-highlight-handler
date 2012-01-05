@@ -53,7 +53,7 @@ Feature:
     Given I am the Papers App
     And all the fixture data exists
     Then there should be a total of 5 "publications"
-    Then there should be a total of 94 highlights
+    Then there should be a total of 95 highlights
 
   Scenario: Posting sloppy XML when the publication already exists
     Given I am the Papers App

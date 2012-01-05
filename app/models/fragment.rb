@@ -27,9 +27,14 @@ class Fragment
   def width; size.first; end
   def height; size.last; end
 
+  def serializable_hash(options = {})
+    super({:methods => [:x, :y, :width, :height]}.merge(options))
+  end
+
   private
   def self.extract_coordinates(rect)
     rect.gsub(/{|}|\s/, '').split(',').map(&:to_f)
   end
+
 
 end

@@ -39,6 +39,10 @@ class Publication
     pub
   end
 
+  def serializable_hash(options = {})
+    super({:except => :highlights, :methods => :popular_highlights}.merge(options))
+  end
+
   def to_param
     uuid
   end

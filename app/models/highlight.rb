@@ -74,4 +74,8 @@ class Highlight
     end
   end
 
+  def serializable_hash(options = {})
+    super({:except => :matched}.merge(options))
+  end
+
 end

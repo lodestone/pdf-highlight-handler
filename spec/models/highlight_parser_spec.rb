@@ -66,6 +66,18 @@ describe HighlightParser do
       
   end
 
+  context "when parsing xml with only a single annotation" do
+
+    before(:all) do
+      Publication.destroy_all
+    end
+
+    it "should parse without errors" do
+      HighlightParser.parse(File.open("#{Rails.root}/spec/fixtures/sample22.xml").read)
+    end
+
+  end
+
 
   context "fuzzy matching" do
 
