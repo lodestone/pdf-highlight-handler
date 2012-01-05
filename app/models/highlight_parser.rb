@@ -5,10 +5,12 @@ class HighlightParser
   class << self
     def parse(xml)
       begin
+        # TODO Log incoming raw requests
         hash = raw_xml_to_hash(xml)
         create_objects_from_hash(hash)
       rescue => ex
-        nil # explicitly returning nil
+        # TODO Log errors
+        return nil # explicitly returning nil because we want to eat the errors at this level
       end
     end
 
