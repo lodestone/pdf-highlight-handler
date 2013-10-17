@@ -33,9 +33,6 @@ describe Publication do
       publication.save
     end
 
-    # it "should have the most popular highlights" do
-       # p publication.popular_highlights 
-    # end
   end
 
 end

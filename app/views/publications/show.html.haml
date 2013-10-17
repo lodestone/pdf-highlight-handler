@@ -13,10 +13,8 @@
     - publication.popular_highlights.each do |highlight|
       - justification = cycle('left', 'right')
       %pre.highlight{:style => "text-align:#{justification}; float:#{justification}"}
-        -# .pull-left= "(#{highlight.score})"
         %code{:style => "text-align:#{justification}"}
           = image_tag 'fileicon.png', :class => 'pull-left', :size => '80x80', :style => "float:#{justification}", :alt => highlight.text
           = "\"#{highlight.text}\""
-          -# .pull-right= highlight.id
 
 

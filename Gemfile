@@ -1,15 +1,8 @@
-# require 'rubygems'
-# require 'mongo'
-
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 gem 'heroku'
 
 gem 'rails', '3.1.2'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-# gem 'nokogiri'
 gem 'crack'
 gem 'decent_exposure'
 gem 'mongo'
@@ -22,8 +15,6 @@ group :production do
 end
 
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.1.5.rc.2'
   gem 'coffee-rails', '~> 3.1.1'
@@ -32,25 +23,13 @@ end
 
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
 group :test, :development do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
   gem "capybara"
   gem "database_cleaner"
-  gem "rspec"
-  gem "rspec-rails"
+  gem "rspec", "~> 2.8"
+  gem "rspec-rails", "~> 2.8.1"
   gem "cucumber"
   gem "capybara"
   gem "cucumber-rails"
