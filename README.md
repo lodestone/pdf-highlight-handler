@@ -1,12 +1,10 @@
-# Papers Highlighter
+# Document (PDF) Highlighter
 
- I originally wrote this as a sinatra app / standalone gem, but I 
+ I originally wrote this as a sinatra app / standalone gem, but I
  realized that this application would *quickly* grow out of sinatra.
 
  This application handles incoming xml of users highlights for a given document/publication.
 
- The site is running here: http://papershighlighter.herokuapp.com
- 
 ## Example POST ##
 
 ```sh
